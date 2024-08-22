@@ -32,6 +32,8 @@ public class MemberController {
         return ResponseEntity.ok(memberService.getMember(memberId));
     }
 
+    @PutMapping("/members/{memberId}")
+
 
 
 
