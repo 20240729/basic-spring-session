@@ -28,6 +28,12 @@ public class MemberService {
     public List<MemberSimpleResponseDto> getMembers(){
         List<Member> memberList = memberRepository.findAll();
 
-        List<MemberSimpleResponseDto> dtoList = new ArrayList<MemberSimpleResponseDto>();
+        List<MemberSimpleResponseDto> dtoList = new ArrayList<>();
+        for (Member member : memberList) {
+            MemberSimpleResponseDto dto = new MemberSimpleResponseDto(member.getName());
+            dtoList.add(dto);
+        }
+
+        return dtoList;
     }
 }
