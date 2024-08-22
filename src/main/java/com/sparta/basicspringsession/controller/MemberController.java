@@ -33,6 +33,7 @@ public class MemberController {
     }
 
     @PutMapping("/members/{memberId}")
+    public ResponseEntity<MemberUpdateResponseDto>
 
 
 
